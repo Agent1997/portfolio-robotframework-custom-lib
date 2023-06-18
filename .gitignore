@@ -1,5 +1,5 @@
 .idea
-venv
+.venv
 log
 __pycache__/
 *.py[cod]
@@ -8,7 +8,6 @@ outputs
 .pabotsuitenames
 properties.py
 pabot_results
-docs
 output.xml
 log.html
 report.html
