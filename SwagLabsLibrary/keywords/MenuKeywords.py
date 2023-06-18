@@ -18,11 +18,24 @@ class MenuKeywords:
         
     @keyword
     def logout_from_swaglabs(self):
+        """Logout from swaglabs.
+            
+            Example:
+            | Logout from swaglabs |
+        """
         self.__open_menu()
         self.__selib.click_element(locator=_LOGOUT)
         
     @keyword
     def menu_items_should_have(self, *args):
+        """Validates that ``args`` are displayed in the menu.
+
+            Arguments:
+            - ``args``: The expected items that should be displayed in the menu.
+            
+            Example:
+            | Menu Items Should Have | About Logout Reset${SPACE}App${SPACE}State |
+        """
         self.__open_menu()
         act_texts = [i.text for i in self.__selib.find_elements(locator=_MENU_ITEMS_LABLE)]
         if not all(text in act_texts for text in list(args)):

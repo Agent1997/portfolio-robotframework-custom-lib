@@ -43,7 +43,7 @@ class BrowserKeywords:
         """Opens the Swaglabs website in a browser.
 
             Arguments:
-            - ``is_headless``: Whether to run the browser in headless mode. Defaults to None.
+            - ``is_headless``: Whether to run the browser in headless mode. If None, will follow the configuration set when `Importing` the library.
             - ``browser``: The browser to use. Defaults to 'chrome'.
 
             Example:
@@ -65,4 +65,9 @@ class BrowserKeywords:
         
     @keyword
     def close_all_swaglabs_browser(self):
+        """Close all swaglabs browser opened by this instance of the library.
+
+            Example:
+            | Close All Swaglabs Browser |
+        """
         self.__selib.close_all_browsers()
