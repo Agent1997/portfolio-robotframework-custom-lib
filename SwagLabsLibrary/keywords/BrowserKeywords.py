@@ -61,7 +61,7 @@ class BrowserKeywords:
         else:
             raise Exception(f"{browser} is not supported.")
         
-        self.__selib.open_browser(browser=browser, options=options)
+        self.__selib.open_browser(browser=browser, options=options, url=url)
         
     @keyword
     def close_all_swaglabs_browser(self):
