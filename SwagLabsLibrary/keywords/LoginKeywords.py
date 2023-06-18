@@ -15,14 +15,14 @@ class LoginKeywords:
     def __init__(self, selib: SeleniumLibrary):
         self.__selib = selib
         
-    @keyword(tags="LoginKeywords",)
+    @keyword(tags=("LoginKeywords",))
     def wait_until_login_page_is_visible(self, timeout: Any = None):
         timeout = timeout if timeout is not None else GLOBAL_SWAGLABS_TIMEOUT
         
         self.__selib.wait_until_element_is_visible(
             locator=_LOGIN_BTN, timeout=timeout, error="Cannot wait for login page to be visible.")
 
-    @keyword(tags="LoginKeywords",)
+    @keyword(tags=("LoginKeywords",))
     def login_to_swaglabs(self, username: str = None, password: str = None):
         self.wait_until_login_page_is_visible()
 

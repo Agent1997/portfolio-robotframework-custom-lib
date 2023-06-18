@@ -40,6 +40,15 @@ class BrowserKeywords:
      
     @keyword(tags=("BrowserKeywords",))   
     def open_swaglabs_in_browser(self, is_headless: bool = None, browser: str = 'chrome'):
+        """Opens the Swaglabs website in a browser.
+
+            Arguments:
+            - ``is_headless``: Whether to run the browser in headless mode. Defaults to None.
+            - ``browser``: The browser to use. Defaults to 'chrome'.
+
+            Example:
+            | Open Swaglabs in Browser | is_headless=${True} | browser=firefox |
+        """
         is_headless = is_headless if is_headless is not None else self.__is_headless
         
         url = _urls.get(self.__env)

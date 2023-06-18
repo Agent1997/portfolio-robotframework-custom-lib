@@ -13,7 +13,7 @@ class ProductsKeywords:
     def __init__(self, selib: SeleniumLibrary):
         self.__selib = selib
 
-    @keyword(tags=("ProductsKeywords"))
+    @keyword(tags=("ProductsKeywords",))
     def wait_until_products_page_is_visible(self, timeout: Any = None):
         timeout = timeout if timeout is not None else GLOBAL_SWAGLABS_TIMEOUT
         self.__selib.wait_until_element_is_visible(
