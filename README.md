@@ -3,6 +3,8 @@
 
 This repository contains a sample Robot Framework custom library named SwagLabsLibrary created using [PythonLibCore](https://github.com/robotframework/PythonLibCore).
 
+**NOTE**: This is for demo purposes only! The construction of the keywords, project structure and the codes may be different in real projects and may be a little more complicated.
+
 ## Introduction
 SwagLabsLibrary provides a set of custom keywords that can be used to automate the testing of [SwagLabs](https://www.saucedemo.com/v1/). 
 
